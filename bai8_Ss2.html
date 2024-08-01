@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbers = new Array(20);
+    let numbersLength = parseInt(prompt("Nhập vào độ dài của mảng: "));
+    let i = 0;
+
+    while (i < numbersLength) {
+        numbers[i] = parseInt(prompt("Nhập vào số thứ " + (i + 1) + ": "));
+        i++;
+    }
+
+    function daoNguocMang(arr) {
+        let first = 0;
+        let last = arr.length - 1;
+
+        while (first < last) {
+            let temp = arr[first];
+            arr[first] = arr[last];
+            arr[last] = temp;
+            first++;
+            last--;
+        }
+
+        return arr;
+    }
+
+    let daoMang = daoNguocMang(numbers.slice(0, numbersLength)); 
+    document.write("Số nguyên sau khi đảo ngược là: " + daoMang.join(", "));
+</script>
+</body>
+</html>

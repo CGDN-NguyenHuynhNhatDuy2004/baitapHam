@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function kiemTraKyTuSo(kyTu) {
+
+        if (!isNaN(kyTu) && kyTu.trim() !== '') {
+            return true;
+        }
+        return false;
+    }
+
+
+    let kyTu = prompt("Nhập vào một ký tự: ");
+    let ketQua = kiemTraKyTuSo(kyTu);
+
+
+    if (ketQua) {
+        document.write("Ký tự '" + kyTu + "' là ký tự số.");
+    } else {
+        document.write("Ký tự '" + kyTu + "' không phải là ký tự số.");
+    }
+</script>
+</body>
+</html>

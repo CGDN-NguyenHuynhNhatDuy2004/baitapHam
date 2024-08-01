@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Định nghĩa hàm kiểm tra ký tự và đếm số lần xuất hiện
+    function kiemTraKyTuTrongMang(mangKyTu, kyTuCanTim) {
+        let soLanXuatHien = 0;
+
+        // Lặp qua mảng để đếm số lần xuất hiện của ký tự
+        for (let kyTu of mangKyTu) {
+            if (kyTu === kyTuCanTim) {
+                soLanXuatHien++;
+            }
+        }
+
+        // Trả về số lần xuất hiện hoặc -1 nếu ký tự không có trong mảng
+        return soLanXuatHien > 0 ? soLanXuatHien : -1;
+    }
+
+    // Định nghĩa mảng ký tự và ký tự cần kiểm tra
+    let mangKyTu = ['a', 'b', 'c', 'a', 'b', 'a'];
+    let kyTuCanTim = prompt("Nhập vào ký tự cần kiểm tra:");
+
+    // Kiểm tra và lấy kết quả
+    let ketQua = kiemTraKyTuTrongMang(mangKyTu, kyTuCanTim);
+
+    // Hiển thị kết quả lên trang web
+    if (ketQua === -1) {
+        document.write("Ký tự '" + kyTuCanTim + "' không có trong mảng.");
+    } else {
+        document.write("Ký tự '" + kyTuCanTim + "' xuất hiện " + ketQua + " lần trong mảng.");
+    }
+</script>
+</body>
+</body>
+</html>
